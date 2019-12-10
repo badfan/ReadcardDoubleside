@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Serial port setup" >
+
+    <ListPreference
+     
+        android:key="DEVICE"
+        android:persistent="true"
+        android:title="串口号" >
+    </ListPreference>
+    <ListPreference
+        android:entries="@array/baudrates_name"
+        android:entryValues="@array/baudrates_value"
+        android:key="BAUDRATE"
+        android:persistent="true"
+         android:summary="@string/summary_str"
+        android:title="波特率" >
+    </ListPreference>
+	<CheckBoxPreference
+	    android:key="checkbox"
+        android:title="读卡提示音"/>
+	<CheckBoxPreference
+	    android:defaultValue="false"  
+	    android:key="checkbox_0"
+        android:title="H02手持机电源"/>
+</PreferenceScreen>
+
